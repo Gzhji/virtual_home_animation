@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Home Staging</title>
+    <style>
+        /* Add some basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 28px; /* Adjust the font size as needed */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px; /* Adjust the font size as needed */
+            max-width: 800px; /* Set the maximum width for the paragraph */
+            margin: 0 auto; /* Center the paragraph */
+            margin-bottom: 100px;
+        }
+
+        figure {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        img {
+            width: 400px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        video {
+            width: 300px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        figcaption {
+            margin-top: 0px;
+<!--            font-style: italic;-->
+        }
+    </style>
+</head>
+<body>
+<h1>Virtual Home Staging: <br>Inverse Rendering and
+Editing an Indoor Panorama under Natural
+Illumination</h1>
+
+<!--<p>Virtual Home Staging: Inverse Rendering and-->
+<!--Editing an Indoor Panorama under Natural-->
+<!--Illumination</p>-->
+
+<h2>Overview</h2>
+<div>
+    <figure>
+        <figcaption>Captured Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+penn+bed+07091127_empty.png" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Virtual Rendered Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+penn+bed+07091127_x=-0.5 y=-0.5 z=0.png" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_exi_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_teaser_66ms.gif" alt="Image 1">
+    </figure>
+</div>
+
+<h2>Editing Empty Scene</h2>
+<div>
+    <figure>
+        <figcaption>Captured Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/1f_bed_20221006_1333.png" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Virtual Rendered Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/1f_bed_20221006_1333_render.png" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/1f_bed_exi_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/1f_bed_new_66ms.gif" alt="Image 1">
+    </figure>
+</div>
+
+<h2>Editing Furnished Scene</h2>
+<div>
+    <figure>
+        <figcaption>Captured Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+murdoch+bed+R0011446_Exi.JPG" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Virtual Rendered Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+murdoch+bed+R0011446.jpg" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/murdoch_exi_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/murdoch_new_66ms.gif" alt="Image 1">
+    </figure>
+</div>
+
+<h2>Editing Camera Positions</h2>
+<div>
+    <figure>
+        <figcaption>Camera Position 1</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+coda+bed+R0011384_new_normal_x=1 y=-0.5 z=0.png" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Camera Position 2</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+coda+bed+R0011384_new_normal_x=-1 y=-1.5 z=0.png" alt="Image 2">
+    </figure>
+    <figure>
+        <figcaption>Camera Position 3</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+coda+bed+R0011384_new_normal_x=-2 y=0 z=0.png" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_p1_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_p2_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_p3_66ms.gif" alt="Image 1">
+    </figure>
+</div>
+
+<h2>Editing Scene Materials</h2>
+<div>
+    <figure>
+        <figcaption>Rendered Existing Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+coda+bed+R0011384_0957.png" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Virtual Rendered Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+coda+bed+R0011384_new_material.png" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_new_material_66ms.gif" alt="Image 1">
+    </figure>
+</div>
+
+<h2>Editing Sun Positions</h2>
+<div>
+    <figure>
+        <figcaption>Rendering with Captured Outdoor Image</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+penn+bed+07091127_new.png" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Rendering with Edited Outdoor Image</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_sun_500ms.gif" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <figcaption>Rendering with Captured Outdoor Image</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_gt.jpg" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Rendering with Edited Outdoor Image</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_newsun_500ms.gif" alt="Image 2">
+    </figure>
+</div>
+
+<h2>Editing Night Scene</h2>
+<div>
+    <figure>
+        <figcaption>Rendered Daytime Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_gt.jpg" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Rendered Night Scene</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_night6336k.png" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_gt_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_night_66ms.gif" alt="Image 1">
+    </figure>
+</div>
+
+<!--<div>-->
+<!--    <figure>-->
+<!--        <figcaption>Rendered Daytime Scene</figcaption>-->
+<!--        <img src="assets/imgs/new+coda+bed+R0011384_0957.png" alt="Image 1">-->
+<!--    </figure>-->
+<!--    <figure>-->
+<!--        <figcaption>Rendered Night Scene</figcaption>-->
+<!--        <img src="assets/imgs/coda_Calculated Data 4 LED with yellow LED.png" alt="Image 2">-->
+<!--    </figure>-->
+<!--</div>-->
+<!--<div>-->
+<!--    <figure>-->
+<!--        <img src="assets/gif/coda334+bed+R0011384_66ms.gif" alt="Image 1">-->
+<!--    </figure>-->
+<!--    <figure>-->
+<!--        <img src="assets/gif/coda334+bed+R0011384_night_66ms.gif" alt="Image 1">-->
+<!--    </figure>-->
+<!--</div>-->
+
+</body>
+</html>
