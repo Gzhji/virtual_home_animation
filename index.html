@@ -24,9 +24,10 @@
 
         p {
             font-size: 16px; /* Adjust the font size as needed */
-            max-width: 800px; /* Set the maximum width for the paragraph */
+            max-width: 900px; /* Set the maximum width for the paragraph */
             margin: 0 auto; /* Center the paragraph */
-            margin-bottom: 100px;
+            margin-bottom: 50px;
+            text-align: left;
         }
 
         figure {
@@ -67,6 +68,18 @@ Single Panorama under Natural Illumination</h1>
 <!--Editing an Indoor Panorama under Natural-->
 <!--Illumination</p>-->
 
+<p>We propose a novel inverse rendering method that enables the transformation
+of existing indoor panoramas with new indoor furniture layouts under natural
+illumination. To achieve this, we captured indoor HDR panoramas along with
+real-time outdoor hemispherical HDR photographs. Indoor and outdoor HDR
+images were linearly calibrated with measured absolute luminance values for accurate
+    scene relighting. Our method consists of four key components: (1) panoramic
+furniture detection and removal, (2) automatic floor layout design, (3) global
+rendering with scene geometry, new furniture objects, and a real-time outdoor
+photograph, and (4) editing camera position, outdoor illumination, scene textures,
+    and electrical lighting. Additionally, we contribute a new calibrated HDR
+(Cali-HDR) dataset that consists of 137 paired indoor and outdoor photographs.</p>
+
 <h2>Overview</h2>
 <div>
     <figure>
@@ -80,14 +93,25 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_exi_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_teaser_66ms.gif" alt="Image 1">
     </figure>
 </div>
+<p>Illustration of Our Rendering Approach: A real-world scene is captured at 11:27 AM (cloudy sky condition).
+    Different furniture objects are removed from the existing room, and the empty scene is refurnished with
+    new virtual furniture objects. A new panorama is then virtually rendered with edited camera position,
+    outdoor illumination at 01:00 PM (clear sky condition), scene textures, and electrical lighting.</p>
 
-<h2>Editing Empty Scene</h2>
+
+<h2>Automatic Floor Layout</h2>
+<p>We edit the existing scenes with new floor layout. For empty scenes, we refurnish the scene with new furniture
+    objects. For the furnished scenes, we detect and remove the existing furniture objects, and then virtually render
+    the scenes with new furniture objects. </p>
+<h4>Room 1</h4>
 <div>
     <figure>
         <figcaption>Captured Scene</figcaption>
@@ -100,13 +124,16 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/1f_bed_exi_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/1f_bed_new_66ms.gif" alt="Image 1">
     </figure>
 </div>
 
+<h4>Room 2</h4>
 <div>
     <figure>
         <figcaption>Captured Scene</figcaption>
@@ -119,15 +146,16 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_entry_exi_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_entry_new_66ms.gif" alt="Image 1">
     </figure>
 </div>
 
-
-<h2>Editing Furnished Scene</h2>
+<h4>Room 3</h4>
 <div>
     <figure>
         <figcaption>Captured Scene</figcaption>
@@ -140,13 +168,16 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/murdoch_exi_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/murdoch_new_66ms.gif" alt="Image 1">
     </figure>
 </div>
 
+<h4>Room 4</h4>
 <div>
     <figure>
         <figcaption>Captured Scene</figcaption>
@@ -159,14 +190,20 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_exi_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_new_66ms.gif" alt="Image 1">
     </figure>
 </div>
 
 <h2>Editing Camera Positions</h2>
+<p>The camera position for virtual staging can be flexibly customized inside the rooms. Our rendering method
+integrates complete 3D scene geometry (including both room geometry and furniture
+objects), outdoor environment map, and material textures. By changing the camera position, the scene will be rendered
+from different view positions.</p>
 <div>
     <figure>
         <figcaption>Camera Position 1</figcaption>
@@ -183,17 +220,55 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_p1_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_p2_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_p3_66ms.gif" alt="Image 1">
     </figure>
 </div>
 
+<h2>View to Outdoor Scene</h2>
+<p>When the camera position is closer to the window, the window pattern is removed and the outdoor scene is
+visualized. The real-time outdoor scene can be observed from various indoor view directions and locations.</p>
+<div>
+    <figure>
+        <figcaption>Virtual Indoor Scene 1</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+penn+bed+07091127_new.png" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Virtual Indoor Scene 2</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+coda+bed+R0011384_0957.png" alt="Image 2">
+    </figure>
+    <figure>
+        <figcaption>Virtual Indoor Scene 3</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_gt.jpg" alt="Image 2">
+    </figure>
+</div>
+<div>
+    <figure>
+        <figcaption>Perspective View</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/new+penn+bed+07091127_outdoor_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Perspective View</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/new+coda+bed+R0011384_outdoor_66ms.gif" alt="Image 1">
+    </figure>
+    <figure>
+        <figcaption>Perspective View</figcaption>
+        <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/new+2F+king+10141348_outdoor_66ms.gif" alt="Image 1">
+    </figure>
+</div>
+
 <h2>Editing Scene Materials</h2>
+<p>The 3D room geometry can be customized with new wall and floor textures during the rendering process. In this example,
+we changed the wall painting and floor textures</p>
+
 <div>
     <figure>
         <figcaption>Rendered Existing Scene</figcaption>
@@ -206,15 +281,23 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_new_material_66ms.gif" alt="Image 1">
     </figure>
 </div>
 
 <h2>Editing Sun Positions</h2>
+<p>In the real world, the outdoor scene changes throughout different times of the day.
+    In this section, we focus on editing the direct illumination of the
+sun in the outdoor image, allowing the indoor scene to be rendered under varying
+sun positions.</p>
 
+
+<h4>Edited Outdoor Scenes</h4>
 <div>
     <figure>
         <figcaption>Outdoor Scene 1</figcaption>
@@ -230,6 +313,7 @@ Single Panorama under Natural Illumination</h1>
     </figure>
 </div>
 
+<h4>Virtual Rendered Scenes</h4>
 <div>
     <figure>
         <figcaption>Rendering with Captured Outdoor Image</figcaption>
@@ -251,7 +335,10 @@ Single Panorama under Natural Illumination</h1>
     </figure>
 </div>
 
-<h2>Editing Night Scene</h2>
+<h2>Adding Electrical Light</h2>
+<p>We achieved virtual staging for the nighttime, when the virtual scene is only illuminated
+by electrical lighting with accurate spectrums.
+</p>
 <div>
     <figure>
         <figcaption>Rendered Daytime Scene</figcaption>
@@ -268,21 +355,26 @@ Single Panorama under Natural Illumination</h1>
 </div>
 <div>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_gt_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_night_66ms.gif" alt="Image 1">
     </figure>
     <figure>
+        <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_night_2660_66ms.gif" alt="Image 1">
     </figure>
 </div>
 
 <h2>Calibrated HDR (Cali-HDR) Dataset</h2>
 <figure>
+    <figcaption>Indoor Panorama</figcaption>
     <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/scene.jpg" alt="Image 1">
 </figure>
 <figure>
+    <figcaption>Outdoor Images</figcaption>
     <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/env.jpg" alt="Image 1">
 </figure>
 
