@@ -22,6 +22,16 @@
             margin-bottom: 20px;
         }
 
+        h3 {
+            margin-top: 60px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            margin-top: 60px;
+            margin-bottom: 10px;
+        }
+
         p {
             font-size: 16px; /* Adjust the font size as needed */
             max-width: 900px; /* Set the maximum width for the paragraph */
@@ -100,6 +110,7 @@ photograph, and (4) editing camera position, outdoor illumination, scene texture
         <figcaption>Perspective View</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/penn_ave_teaser_66ms.gif" alt="Image 1">
     </figure>
+ 
 </div>
 <p>Illustration of Our Rendering Approach: A real-world scene is captured at 11:27 AM (cloudy sky condition).
     Different furniture objects are removed from the existing room, and the empty scene is refurnished with
@@ -200,10 +211,6 @@ photograph, and (4) editing camera position, outdoor illumination, scene texture
 </div>
 
 <h2>Editing Camera Positions</h2>
-<p>The camera position for virtual staging can be flexibly customized inside the rooms. Our rendering method
-integrates complete 3D scene geometry (including both room geometry and furniture
-objects), outdoor environment map, and material textures. By changing the camera position, the scene will be rendered
-from different view positions.</p>
 <div>
     <figure>
         <figcaption>Camera Position 1</figcaption>
@@ -232,10 +239,13 @@ from different view positions.</p>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_p3_66ms.gif" alt="Image 1">
     </figure>
 </div>
+<p>The camera position for virtual staging can be flexibly customized inside the rooms. Our rendering method
+integrates complete 3D scene geometry (including both room geometry and furniture
+objects), outdoor environment map, and material textures. By changing the camera position, the scene will be rendered
+from different view positions.</p>
 
 <h2>View to Outdoor Scene</h2>
-<p>When the camera position is closer to the window, the window pattern is removed and the outdoor scene is
-visualized. The real-time outdoor scene can be observed from various indoor view directions and locations.</p>
+
 <div>
     <figure>
         <figcaption>Virtual Indoor Scene 1</figcaption>
@@ -264,11 +274,11 @@ visualized. The real-time outdoor scene can be observed from various indoor view
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/new+2F+king+10141348_outdoor_66ms.gif" alt="Image 1">
     </figure>
 </div>
+<p>When the camera position is closer to the window, the window pattern is removed, so the real-time outdoor scene can be
+    observed from various indoor view directions and locations.</p>
+
 
 <h2>Editing Scene Materials</h2>
-<p>The 3D room geometry can be customized with new wall and floor textures during the rendering process. In this example,
-we changed the wall painting and floor textures</p>
-
 <div>
     <figure>
         <figcaption>Rendered Existing Scene</figcaption>
@@ -289,15 +299,11 @@ we changed the wall painting and floor textures</p>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/coda334+bed+R0011384_new_material_66ms.gif" alt="Image 1">
     </figure>
 </div>
+<p>The 3D room geometry can be customized with new wall and floor textures in the rendering model. In this example,
+    we changed the wall painting and floor textures of the existing room.</p>
 
 <h2>Editing Sun Positions</h2>
-<p>In the real world, the outdoor scene changes throughout different times of the day.
-    In this section, we focus on editing the direct illumination of the
-sun in the outdoor image, allowing the indoor scene to be rendered under varying
-sun positions.</p>
-
-
-<h4>Edited Outdoor Scenes</h4>
+<h4>Edited Outdoor Images</h4>
 <div>
     <figure>
         <figcaption>Outdoor Scene 1</figcaption>
@@ -312,11 +318,16 @@ sun positions.</p>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/Essex_newsun_outdoor_500ms.gif" alt="Image 2">
     </figure>
 </div>
+<p>In the real world, the outdoor scene changes throughout different times of the day.
+    In this section, we focus on editing the direct illumination of the
+sun in the outdoor image, allowing the indoor scene to be rendered under varying
+sun positions. The figures above demonstrate the edited outdoor images
+    under different weather conditions and at various time points.</p>
 
 <h4>Virtual Rendered Scenes</h4>
 <div>
     <figure>
-        <figcaption>Rendering with Captured Outdoor Image</figcaption>
+        <figcaption>Rendered Scene 1 with Captured Outdoor Image</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+penn+bed+07091127_new.png" alt="Image 1">
     </figure>
     <figure>
@@ -326,7 +337,7 @@ sun positions.</p>
 </div>
 <div>
     <figure>
-        <figcaption>Rendering with Captured Outdoor Image</figcaption>
+        <figcaption>Rendered Scene 2 with Captured Outdoor Image</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_gt.jpg" alt="Image 1">
     </figure>
     <figure>
@@ -334,22 +345,23 @@ sun positions.</p>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_newsun_500ms.gif" alt="Image 2">
     </figure>
 </div>
+<p>In Rendered Scene 1, we add direct sunlight into the cloudy outdoor images, the scene is rendered with various
+    sun positions during the day. In Rendered Scene 2, we adjust the sun position in the afternoon, allowing the
+    indoor scene to showcase its changing appearance as the sun moves from early afternoon to late afternoon.</p>
+
 
 <h2>Adding Electrical Light</h2>
-<p>We achieved virtual staging for the nighttime, when the virtual scene is only illuminated
-by electrical lighting with accurate spectrums.
-</p>
 <div>
     <figure>
         <figcaption>Rendered Daytime Scene</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_gt.jpg" alt="Image 1">
     </figure>
     <figure>
-        <figcaption>Rendered Nighttime Scene 1 (6336k)</figcaption>
+        <figcaption>Rendered Nighttime Scene 1 (LED 6336k)</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_night6336k.png" alt="Image 2">
     </figure>
     <figure>
-        <figcaption>Rendered Nighttime Scene 2 (2660k)</figcaption>
+        <figcaption>Rendered Nighttime Scene 2 (LED 2660k)</figcaption>
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/new+2F+king+10141348_night2660k.png" alt="Image 2">
     </figure>
 </div>
@@ -367,6 +379,10 @@ by electrical lighting with accurate spectrums.
         <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/gif/2f_king_night_2660_66ms.gif" alt="Image 1">
     </figure>
 </div>
+<p>We achieved virtual staging for the night scene, when the virtual scene is only illuminated
+by electrical lighting with accurate spectra. The virtual scenes are rendered under different spectra and display unique
+  indoor appearance.</p>
+
 
 <h2>Calibrated HDR (Cali-HDR) Dataset</h2>
 <figure>
@@ -377,6 +393,11 @@ by electrical lighting with accurate spectrums.
     <figcaption>Outdoor Images</figcaption>
     <img src="https://www.andrew.cmu.edu/user/gji/MVA_website/assets/imgs/env.jpg" alt="Image 1">
 </figure>
+<p>we contribute a new calibrated HDR (Cali-HDR) dataset that consists of 137 paired indoor and outdoor photographs.
+In our work, we calibrate the captured HDR panoramas
+using absolute luminance value (in SI units) measured in each scene. This calibration
+ensures that our HDR images accurately represent realistic spatially varying lighting
+conditions. </p>
 
 </body>
 </html>
